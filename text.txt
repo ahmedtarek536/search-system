@@ -1,0 +1,22 @@
+// // Mode // //
+// i -> insert mode     ,   esc  -> normal mode
+// j -> move down ,  k -> move up  ,  l -> move right , h -> move left (you can make 3k -> move up 3line)
+
+// IiAao     i -> befor letter   ,  a -> after letter   ,    I -> go to start line
+//  A -> go to end line  , O -> make new line after line   ,  O -> make new line befor line
+
+// xr       x  -> remove letter   ,   r -> edit letter
+// u ->  ctr + z    oppsite is ctr + r
+
+/*
+vim instruction: (
+:set number
+:set relativenumber
+
+) */
+
+// 9.3
+
+//  ow!laj
+// ii to alot ofthinghfj for this lect ure
+// 12345

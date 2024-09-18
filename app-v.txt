@@ -1,0 +1,57 @@
+#include <iostream>
+#include <string>
+#include <algorithm> // For std::clamp
+#include <random>
+
+float randomFloat(float min, float max)
+{
+    // Create a random number generator
+    std::random_device rd;
+    std::mt19937 gen(rd()); // Standard Mersenne Twister engine seeded with rd
+
+    // Define the range for the random number
+    std::uniform_real_distribution<float> distr(min, max);
+
+    // Generate a random number
+    return distr(gen);
+}
+
+struct Character
+{
+    std::string name;
+    float health;
+    float attack;
+    float defense;
+    bool IsDead();
+    void Attack(Character &target);
+};
+
+bool Character::IsDead()
+{
+    return health <= 0;
+}
+
+void Character::Attack(Character &target)
+{
+    float damage = attack - target.defense;
+    float new_health = std::clamp(target.health - damage, 0.0f, 10000.0f);
+    target.health = new_health;
+}
+
+int main()
+{
+    Character ahmed = {"Ahmed", 1200, 100, 25};
+    Character roney = {"Roney", 1000, 120, 30};
+
+    while (!ahmed.IsDead() && !roney.IsDead())
+    {
+        float r1 = randomFloat(0, 100);
+        float r2 = randomFloat(0, 100);
+
+        // if (r1 > r2) {
+        //     ahmed.Attack(roney)
+        // }
+    }
+}
+
+// give some second to restart router

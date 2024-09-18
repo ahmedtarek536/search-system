@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "*.css": "css",
+    "iostream": "cpp",
+    "xlocale": "cpp",
+    "xstring": "cpp",
+    "algorithm": "cpp",
+    "cstdlib": "cpp",
+    "vector": "cpp"
+  }
+}
